@@ -60,6 +60,5 @@ public class UIMainMenu : MonoBehaviour
         text_Level.text = player.Level.ToString();
         text_Exp.text = $"{player.ExpCurrnet} / {player.ExpMax}";
         image_FillAmount.fillAmount = (float)player.ExpCurrnet / player.ExpMax;
-        rect_HorizontalLayout.ForceUpdateRectTransforms();
     }
 }
