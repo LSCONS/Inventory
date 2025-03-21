@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class UIStatus : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Character playerCharacter;
+    public Character PlayerCharacter { get =>  playerCharacter; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

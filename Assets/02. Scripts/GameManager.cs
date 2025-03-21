@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    private Character player;
+    public Character Player { get =>  player; }
+
+    public GameManager() 
     {
-        
+        player = new Character();
+        SetData();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void SetData()
     {
-        
+        player.SettingPlayerInfo
+        (
+            "Chad",
+            "코딩의 노예가 된지 2개월이 되는 송제우... 오늘도 잠을 줄이며 열심히 코딩을 하는 모습이 안타깝네요.",
+            10,
+            9,
+            12,
+            35,
+            40,
+            100,
+            25
+        );
     }
 }
