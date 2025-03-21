@@ -10,6 +10,11 @@ public class GameManager : Singleton<GameManager>
     public GameManager() 
     {
         player = new Character();
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
         SetData();
     }
 
@@ -28,5 +33,7 @@ public class GameManager : Singleton<GameManager>
             100,
             25
         );
+        UIManager.Instance.Menu.TextUpdate(Player);
+        UIManager.Instance.Status.TextUpdate(Player);
     }
 }

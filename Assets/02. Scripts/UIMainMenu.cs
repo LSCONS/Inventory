@@ -16,6 +16,8 @@ public class UIMainMenu : MonoBehaviour
 
     [SerializeField] private Image image_FillAmount;
 
+    [SerializeField] private RectTransform rect_HorizontalLayout;
+
     private void Start()
     {
         button_Status.onClick.AddListener(OpenStatus);
@@ -24,9 +26,12 @@ public class UIMainMenu : MonoBehaviour
 
 
     //메인 메뉴를 활성화할 때 사용하는 메서드
-    private void OpenMainMenu()
+    public void OpenMainMenu()
     {
-        UIManager.Instance.Menu.gameObject.SetActive(true);
+        button_Status.gameObject.SetActive(true);
+        button_Inventory.gameObject.SetActive(true);
+        UIManager.Instance.Status.gameObject.SetActive(false);
+        UIManager.Instance.Inventory.gameObject.SetActive(false);
     }
 
 
@@ -34,6 +39,8 @@ public class UIMainMenu : MonoBehaviour
     private void OpenStatus()
     {
         UIManager.Instance.Status.gameObject.SetActive(true);
+        button_Status.gameObject.SetActive(false);
+        button_Inventory.gameObject.SetActive(false);
     }
 
 
@@ -41,6 +48,8 @@ public class UIMainMenu : MonoBehaviour
     private void OpenInventory()
     {
         UIManager.Instance.Inventory.gameObject.SetActive(true);
+        button_Status.gameObject.SetActive(false);
+        button_Inventory.gameObject.SetActive(false);
     }
 
 
@@ -51,5 +60,6 @@ public class UIMainMenu : MonoBehaviour
         text_Level.text = player.Level.ToString();
         text_Exp.text = $"{player.ExpCurrnet} / {player.ExpMax}";
         image_FillAmount.fillAmount = (float)player.ExpCurrnet / player.ExpMax;
+        rect_HorizontalLayout.ForceUpdateRectTransforms();
     }
 }
