@@ -14,6 +14,8 @@ public class Character
     private int health;
     private int critical;
 
+    private List<Item> inventory;
+
     public string PlayerName { get => playerName; }
     public string PlayerInfo { get => playerInfo; }
     public int Level { get => level; }
@@ -23,6 +25,7 @@ public class Character
     public int Defence { get => defence; }
     public int Health { get => health; }
     public int Critical { get => critical; }
+    public List<Item> Inventory { get => inventory; }
 
 
     //플레이어의 정보를 초기화하는 메서드
@@ -48,5 +51,28 @@ public class Character
         defence = _defence;
         health = _health;
         critical = _critical;
+    }
+
+    public void AddItem(Item item)
+    {
+        inventory.Add(item);
+    }
+
+
+    public void Equipped(Item item)
+    {
+        attack += item.Data.attack;
+        defence += item.Data.defence;
+        health += item.Data.health;
+        critical += item.Data.critical;
+    }
+
+
+    public void UnEquipped(Item item)
+    {
+        attack -= item.Data.attack;
+        defence -= item.Data.defence;
+        health -= item.Data.health;
+        critical -= item.Data.critical;
     }
 }

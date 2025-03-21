@@ -7,6 +7,8 @@ public class GameManager : Singleton<GameManager>
     private Character player;
     public Character Player { get =>  player; }
 
+    private int addItemCount = 10;
+
     public GameManager() 
     {
         player = new Character();
@@ -35,5 +37,10 @@ public class GameManager : Singleton<GameManager>
         );
         UIManager.Instance.Menu.TextUpdate(Player);
         UIManager.Instance.Status.TextUpdate(Player);
+
+        for (int i = 0; i < addItemCount; i++)
+        {
+            UIManager.Instance.Inventory.InputItem(ResourceManager.Instance.CreateNewItem());
+        }
     }
 }
