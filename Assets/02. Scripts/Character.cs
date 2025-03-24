@@ -53,26 +53,35 @@ public class Character
         critical = _critical;
     }
 
+
     public void AddItem(Item item)
     {
         inventory.Add(item);
     }
 
 
-    public void Equipped(Item item)
+    /// <summary>
+    /// 장비를 입거나 벗을 경우 능력치를 더하거나 빼는 메서드
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="isEquiiped"></param>
+    public void TryEquipped(Item item, bool isEquiiped)
     {
-        attack += item.Data.attack;
-        defence += item.Data.defence;
-        health += item.Data.health;
-        critical += item.Data.critical;
-    }
+        if (isEquiiped)
+        {
+            attack += item.Data.attack;
+            defence += item.Data.defence;
+            health += item.Data.health;
+            critical += item.Data.critical;
+        }
+        else
+        {
+            attack -= item.Data.attack;
+            defence -= item.Data.defence;
+            health -= item.Data.health;
+            critical -= item.Data.critical;
+        }
 
-
-    public void UnEquipped(Item item)
-    {
-        attack -= item.Data.attack;
-        defence -= item.Data.defence;
-        health -= item.Data.health;
-        critical -= item.Data.critical;
+        UIManager.Instance.Status.TextUpdate(this);
     }
 }

@@ -13,7 +13,7 @@ public class UIInventory : MonoBehaviour
 
     private int count_Inventory = 24;
 
-    private void Start()
+    private void Awake()
     {
         button_Back.onClick.AddListener(ReturnMainMenu);
         for(int i = 0; i < count_Inventory; i++)

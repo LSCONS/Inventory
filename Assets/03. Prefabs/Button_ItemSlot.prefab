@@ -348,6 +348,7 @@ MonoBehaviour:
   isEquipped: 0
   Image_Equipped: {fileID: 6635489867047638290}
   Image_Icon: {fileID: 6482923644047686512}
+  button_UIslot: {fileID: 6326214669349678089}
 --- !u!1 &6873084077001781166
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class UIMainMenu : MonoBehaviour
     {
         button_Status.onClick.AddListener(OpenStatus);
         button_Inventory.onClick.AddListener(OpenInventory);
+        OpenMainMenu();
     }
 
 

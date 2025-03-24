@@ -12,6 +12,26 @@ public class UISlot : MonoBehaviour
     [SerializeField] private Image Image_Equipped;
     [SerializeField] private Image Image_Icon;
 
+    [SerializeField] private Button button_UIslot;
+
+    private void Awake()
+    {
+        button_UIslot.onClick.AddListener(TryEquippedItem);
+        Image_Equipped.gameObject.SetActive(isEquipped);
+    }
+
+
+    //아이템을 장비를 입고 벗을 때 사용하는 메서드
+    private void TryEquippedItem()
+    {
+        if (item != null)
+        {
+            isEquipped = !isEquipped;
+            Image_Equipped.gameObject.SetActive(isEquipped);
+            GameManager.Instance.Player.TryEquipped(item, isEquipped);
+        }
+    }
+
 
     /// <summary>
     /// 아이템 칸에 아이템을 집어넣는 메서드
@@ -20,7 +40,6 @@ public class UISlot : MonoBehaviour
     public void SetItem(Item _item)
     {
         item = _item;
-        isEquipped = true;
         Image_Icon.color = item.Data.colorItem;
     }
 
