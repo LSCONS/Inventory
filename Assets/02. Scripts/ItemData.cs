@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "item", menuName = "New Item")]
-public class ItemData : ScriptableObject
+public class ItemData : ScriptableObject 
 {
     public int attack;
     public int defence;

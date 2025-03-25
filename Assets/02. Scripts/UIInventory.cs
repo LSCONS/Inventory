@@ -9,7 +9,7 @@ public class UIInventory : MonoBehaviour
     [SerializeField] private UISlot uiSlot;
     [SerializeField] private Transform uiSlot_Content;
 
-    public List<UISlot> slots = new List<UISlot>();
+    public List<UISlot> slots = new List<UISlot>(); 
 
     private int count_Inventory = 24;
 
@@ -25,7 +25,7 @@ public class UIInventory : MonoBehaviour
     }
 
 
-    //¸ŞÀÎ ¸Ş´º·Î µ¹¾Æ°¡´Â ¸Ş¼­µå
+    //ë©”ì¸ ë©”ë‰´ë¡œ ëŒì•„ê°€ëŠ” ë©”ì„œë“œ
     private void ReturnMainMenu()
     {
         UIManager.Instance.Menu.OpenMainMenu();
@@ -33,9 +33,9 @@ public class UIInventory : MonoBehaviour
 
 
     /// <summary>
-    /// ¾ÆÀÌÅÛÀ» ¾ÆÀÌÅÛ ½½·Ô¿¡ Ãß°¡ÇÏ´Â ¸Ş¼­µå
+    /// ì•„ì´í…œì„ ì•„ì´í…œ ìŠ¬ë¡¯ì— ì¶”ê°€í•˜ëŠ” ë©”ì„œë“œ
     /// </summary>
-    /// <param name="_item">Áı¾î ³ÖÀ» ¾ÆÀÌÅÛ</param>
+    /// <param name="_item">ì§‘ì–´ ë„£ì„ ì•„ì´í…œ</param>
     public void InputItem(Item _item)
     {
         for(int i = 0;i < slots.Count;i++)

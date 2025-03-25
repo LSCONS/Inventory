@@ -13,7 +13,7 @@ public class ResourceManager : Singleton<ResourceManager>
     }
 
     /// <summary>
-    /// ¾ÆÀÌÅÛÀ» µ¥ÀÌÅÍ¿¡¼­ »õ·Î ÇÏ³ª »ı¼ºÇØ¼­ °¡Á®¿Ã ¸Ş¼­µå
+    /// ì•„ì´í…œì„ ë°ì´í„°ì—ì„œ ìƒˆë¡œ í•˜ë‚˜ ìƒì„±í•´ì„œ ê°€ì ¸ì˜¬ ë©”ì„œë“œ  
     /// </summary>
     /// <returns></returns>
     public Item CreateNewItem()

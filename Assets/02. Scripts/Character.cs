@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character
 {
-    private string playerName;
+    private string playerName; 
     private string playerInfo;
     private int level;
     private int expCurrent;
@@ -28,7 +28,7 @@ public class Character
     public List<Item> Inventory { get => inventory; }
 
 
-    //ÇÃ·¹ÀÌ¾îÀÇ Á¤º¸¸¦ ÃÊ±âÈ­ÇÏ´Â ¸Ş¼­µå
+    //í”Œë ˆì´ì–´ì˜ ì •ë³´ë¥¼ ì´ˆê¸°í™”í•˜ëŠ” ë©”ì„œë“œ
     public void SettingPlayerInfo
         (
             string _playerName, 
@@ -61,7 +61,7 @@ public class Character
 
 
     /// <summary>
-    /// Àåºñ¸¦ ÀÔ°Å³ª ¹şÀ» °æ¿ì ´É·ÂÄ¡¸¦ ´õÇÏ°Å³ª »©´Â ¸Ş¼­µå
+    /// ì¥ë¹„ë¥¼ ì…ê±°ë‚˜ ë²—ì„ ê²½ìš° ëŠ¥ë ¥ì¹˜ë¥¼ ë”í•˜ê±°ë‚˜ ë¹¼ëŠ” ë©”ì„œë“œ
     /// </summary>
     /// <param name="item"></param>
     /// <param name="isEquiiped"></param>

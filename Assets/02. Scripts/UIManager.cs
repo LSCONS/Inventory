@@ -9,6 +9,6 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private UIStatus status;
 
     public UIMainMenu Menu { get => menu; }
-    public UIInventory Inventory { get => inventory; }
+    public UIInventory Inventory { get => inventory; } 
     public UIStatus Status { get => status; }
 }

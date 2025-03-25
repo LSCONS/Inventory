@@ -10,7 +10,7 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private Button button_Inventory;
 
     [SerializeField] private TextMeshProUGUI text_PlayerName;
-    [SerializeField] private TextMeshProUGUI text_Level;
+    [SerializeField] private TextMeshProUGUI text_Level; 
     [SerializeField] private TextMeshProUGUI text_Exp;
     [SerializeField] private TextMeshProUGUI text_PlayerInfo;
 
@@ -26,7 +26,7 @@ public class UIMainMenu : MonoBehaviour
     }
 
 
-    //¸ŞÀÎ ¸Ş´º¸¦ È°¼ºÈ­ÇÒ ¶§ »ç¿ëÇÏ´Â ¸Ş¼­µå
+    //ë©”ì¸ ë©”ë‰´ë¥¼ í™œì„±í™”í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ë©”ì„œë“œ
     public void OpenMainMenu()
     {
         button_Status.gameObject.SetActive(true);
@@ -36,7 +36,7 @@ public class UIMainMenu : MonoBehaviour
     }
 
 
-    //½ºÅ×ÀÌÅÍ½º¸¦ È°¼ºÈ­ÇÒ ¶§ »ç¿ëÇÏ´Â ¸Ş¼­µå
+    //ìŠ¤í…Œì´í„°ìŠ¤ë¥¼ í™œì„±í™”í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ë©”ì„œë“œ
     private void OpenStatus()
     {
         UIManager.Instance.Status.gameObject.SetActive(true);
@@ -45,7 +45,7 @@ public class UIMainMenu : MonoBehaviour
     }
 
 
-    //ÀÎº¥Åä¸®¸¦ È°¼ºÈ­ÇÒ ¶§ »ç¿ëÇÏ´Â ¸Ş¼­µå
+    //ì¸ë²¤í† ë¦¬ë¥¼ í™œì„±í™”í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ë©”ì„œë“œ
     private void OpenInventory()
     {
         UIManager.Instance.Inventory.gameObject.SetActive(true);

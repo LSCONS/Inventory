@@ -11,7 +11,7 @@ public class UISlot : MonoBehaviour
     public Item item;
     [SerializeField] private Image Image_Equipped;
     [SerializeField] private Image Image_Icon;
-
+     
     [SerializeField] private Button button_UIslot;
 
     private void Awake()
@@ -21,7 +21,7 @@ public class UISlot : MonoBehaviour
     }
 
 
-    //¾ÆÀÌÅÛÀ» Àåºñ¸¦ ÀÔ°í ¹şÀ» ¶§ »ç¿ëÇÏ´Â ¸Ş¼­µå
+    //ì•„ì´í…œì„ ì¥ë¹„ë¥¼ ì…ê³  ë²—ì„ ë•Œ ì‚¬ìš©í•˜ëŠ” ë©”ì„œë“œ
     private void TryEquippedItem()
     {
         if (item != null)
@@ -34,9 +34,9 @@ public class UISlot : MonoBehaviour
 
 
     /// <summary>
-    /// ¾ÆÀÌÅÛ Ä­¿¡ ¾ÆÀÌÅÛÀ» Áı¾î³Ö´Â ¸Ş¼­µå
+    /// ì•„ì´í…œ ì¹¸ì— ì•„ì´í…œì„ ì§‘ì–´ë„£ëŠ” ë©”ì„œë“œ
     /// </summary>
-    /// <param name="_item">³ÖÀ» ¾ÆÀÌÅÛ</param>
+    /// <param name="_item">ë„£ì„ ì•„ì´í…œ</param>
     public void SetItem(Item _item)
     {
         item = _item;

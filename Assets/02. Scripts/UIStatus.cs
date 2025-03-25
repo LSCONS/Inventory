@@ -8,7 +8,7 @@ public class UIStatus : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text_attack;
     [SerializeField] private TextMeshProUGUI text_defence;
-    [SerializeField] private TextMeshProUGUI text_health;
+    [SerializeField] private TextMeshProUGUI text_health; 
     [SerializeField] private TextMeshProUGUI text_critical;
 
     [SerializeField] private Button button_Back;
@@ -20,9 +20,9 @@ public class UIStatus : MonoBehaviour
 
 
     /// <summary>
-    /// ÇÃ·¹ÀÌ¾îÀÇ Status¿¡ UI Text¸¦ ¾÷µ¥ÀÌÆ®ÇÏ´Â ¸Ş¼­µå
+    /// í”Œë ˆì´ì–´ì˜ Statusì— UI Textë¥¼ ì—…ë°ì´íŠ¸í•˜ëŠ” ë©”ì„œë“œ
     /// </summary>
-    /// <param name="player">¾÷µ¥ÀÌÆ®ÇÒ ÇÃ·¹ÀÌ¾îÀÇ Á¤º¸</param>
+    /// <param name="player">ì—…ë°ì´íŠ¸í•  í”Œë ˆì´ì–´ì˜ ì •ë³´</param>
     public void TextUpdate(Character player)
     {
         text_attack.text = player.Attack.ToString();
@@ -32,7 +32,7 @@ public class UIStatus : MonoBehaviour
     }
 
 
-    // µÚ·Î°¡±â ¹öÆ°À» ´­·¯¼­ ¸ŞÀÎ ¸Ş´º·Î µ¹¾Æ°¡´Â ¸Ş¼­µå
+    // ë’¤ë¡œê°€ê¸° ë²„íŠ¼ì„ ëˆŒëŸ¬ì„œ ë©”ì¸ ë©”ë‰´ë¡œ ëŒì•„ê°€ëŠ” ë©”ì„œë“œ
     private void ReturnMainMenu()
     {
         UIManager.Instance.Menu.OpenMainMenu();

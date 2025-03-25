@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     private Character player;
-    public Character Player { get =>  player; }
+    public Character Player { get =>  player; } 
 
     private int addItemCount = 10;
 
@@ -30,7 +30,7 @@ public class GameManager : Singleton<GameManager>
         player.SettingPlayerInfo
         (
             "Chad",
-            "ÄÚµùÀÇ ³ë¿¹°¡ µÈÁö 2°³¿ùÀÌ µÇ´Â ¼ÛÁ¦¿ì... ¿À´Ãµµ ÀáÀ» ÁÙÀÌ¸ç ¿­½ÉÈ÷ ÄÚµùÀ» ÇÏ´Â ¸ğ½ÀÀÌ ¾ÈÅ¸±õ³×¿ä.",
+            "ì½”ë”©ì˜ ë…¸ì˜ˆê°€ ëœì§€ 2ê°œì›”ì´ ë˜ëŠ” ì†¡ì œìš°... ì˜¤ëŠ˜ë„ ì ì„ ì¤„ì´ë©° ì—´ì‹¬íˆ ì½”ë”©ì„ í•˜ëŠ” ëª¨ìŠµì´ ì•ˆíƒ€ê¹ë„¤ìš”.",
             10,
             9,
             12,
