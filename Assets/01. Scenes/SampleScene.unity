@@ -5107,7 +5107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button_Back: {fileID: 1461991959}
-  uiSlot: {fileID: 6830949324350287038, guid: d70bd8e526c973047bdc892743c56ba1, type: 3}
+  uiSlot: {fileID: 4667498171746932092, guid: d70bd8e526c973047bdc892743c56ba1, type: 3}
   uiSlot_Content: {fileID: 479274559}
   slots: []
 --- !u!1 &1761319662

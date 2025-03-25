@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIInventory : MonoBehaviour
 {
     [SerializeField] private Button button_Back;
-    [SerializeField] private GameObject uiSlot;
+    [SerializeField] private UISlot uiSlot;
     [SerializeField] private Transform uiSlot_Content;
 
     public List<UISlot> slots = new List<UISlot>();
@@ -18,7 +18,7 @@ public class UIInventory : MonoBehaviour
         button_Back.onClick.AddListener(ReturnMainMenu);
         for(int i = 0; i < count_Inventory; i++)
         {
-            UISlot temp = Instantiate(uiSlot, uiSlot_Content).GetComponent<UISlot>();
+            UISlot temp = Instantiate(uiSlot, uiSlot_Content);
             temp.slot_Count = i;
             slots.Add(temp);
         }
